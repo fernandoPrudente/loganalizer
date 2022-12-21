@@ -1,0 +1,14 @@
+version: '3'
+services: 
+  database:
+    image: mongo:4
+    ports: 
+      - 27017:27017 
+  webapi: 
+    image: node
+    command: sh -c "npm i typescript -g && npm run serve"
+    ports:
+      - 5000:5000
+    working_dir: /api
+    volumes: 
+      - ./:/api/
