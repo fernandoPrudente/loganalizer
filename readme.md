@@ -81,7 +81,7 @@ Por conta de ataque em sistema da companhia XPTO, o time de desenvolvimento foi 
 Eu, como engenheiro de segurança, dentro da aplicação web (XPTO), na funcionalidade de listagem de logs por categoria, quero também pesquisar logs por período de data. Então além de selecionar a categoria, poderei também fazer filtros por período.
 
 # Arquitetura
-![Alternate image text](https://github.com/fernandoPrudente/loganalizer/blob/master/readme-images/arc-diagram.png)
+![hexagonal architecture with anti-corruption pattern](https://github.com/fernandoPrudente/loganalizer/blob/master/readme-images/arc-diagram.png)
 
 
 # Setup
