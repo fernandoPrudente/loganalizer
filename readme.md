@@ -10,15 +10,15 @@
 
 Esse contempla o fonte do desenvolvimento do app, referente ao teste técnico aplicado pela Accenture e qual compõe um passo do processo seletivo para vaga de tecnologia.
 
-O exercício proposto cita algumas habilidades de engenharia e tecnologias como preferenciais como também a possibilidade de aumento da pontuação quando utilizado certos requisitos:
+O exercício proposto cita algumas habilidades de engenharia e tecnologias como preferenciais, como também a possibilidade de aumento da pontuação quando utilizado certos requisitos:
 
-A vontade era implementar os mínimos detalhes propostos, demonstrando todos os conhecimentos envolvendo visão arquitetural tendo como alto valor o isolamento do domínio do problema e suas fronteiras, esteira para integração contínua e deploy, demonstração de Clean Code e princípios Solid, dentre outros. Infelizmente utilizei o pouco tempo que tenho, ainda muito colado nos dias de festas de final de ano, então:
+A vontade era implementar os mínimos detalhes propostos, demonstrando todos os conhecimentos envolvendo visão arquitetural tendo como alto valor o isolamento do domínio do problema e suas fronteiras, esteira para integração contínua e deploy, demonstração de Clean Code e princípios Solid, dentre outros. Infelizmente utilizei o pouco tempo que tenho, e ainda muito próximo dos dias de festas de final de ano, então:
 
 1. Alguns pontos realmente não tive tempo de implementar e peço desculpas.
-2. Tentei mostrar alguns patterns (exemplo: Adapter, Factory, Anti Corrupção) e princípios (exemplo OCP, LSP ) no backend. Sei que no mundo real nem sempre fazemos muitos deles, pois algumas vezes poderia ser um esforço desnecessário, seguindo sempre os princípios de XP (YAGNI, DRY, KISS, ETC), mas por questões de demonstração preferi colocar alguns no código, então, peço que olhe por esse lado.
+2. Tentei mostrar alguns patterns (exemplo: Adapter, Factory, Anti Corrupção) e princípios (exemplo OCP, LSP ) no backend. Sei que no mundo real nem sempre faria sentido muitos deles, pois algumas vezes poderia ser um esforço desnecessário, decisão sempre embasada na cultura ágil, inclusive dentro dos princípios de XP (YAGNI, DRY, KISS, ETC), mas por questões de demonstração preferi colocar alguns no código, então, peço que olhe por esse lado.
 3. Não tive tempo de configurar a esteira (iria utilizar o github action e publicar em algum serviço do GCP)
 4. Fiz testes unitários apenas de algumas classes e componentes, também por questão de tempo, por mais que acho testabilidade a parte mais importante de qualquer projeto, mas precisava demonstrar outros pontos para avaliação de vocês.
-5. Tentei demonstrar um pouco do desenho da aplicação utilizando Hexagonal Architecture, pois achei que ficaria melhor nesse cenário, mas poderia ter feito utilizando outros. Mas demonstrei só um pouco e sei muito poderia ter sido melhor abstraido, mas acho que dá para medir um pouco do meu conhecimento :).
+5. Tentei demonstrar um pouco do desenho da aplicação utilizando Hexagonal Architecture, pois achei que ficaria melhor nesse cenário, mas poderia ter feito utilizando outras abordagens. MDemonstrei só um pouco e sei que muitos pontos poderiam ter sido melhor abstraido, mas acho que dá para medir um pouco do meu conhecimento :).
 
 Os pontos que na minha visão, serão avaliados com mais ênfase e que foram os que tentei dar mais destaque:
 
