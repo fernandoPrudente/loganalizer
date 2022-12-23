@@ -2,8 +2,7 @@
 1. [Visão Geral](#overview)
 2. [Backlog](#Backlog)
 3. [Arquitetura](#Arquitetura)
-4. [Setup] (#Setup)
-5. [Usando](#Usando)
+4. [Implementação](#Implementação)
 
 
 # overview
@@ -19,6 +18,7 @@ A vontade era implementar os mínimos detalhes propostos, demonstrando todos os 
 3. Não tive tempo de configurar a esteira (iria utilizar o github action e publicar em algum serviço do GCP)
 4. Fiz testes unitários apenas de algumas classes e componentes, também por questão de tempo, por mais que acho testabilidade a parte mais importante de qualquer projeto, mas precisava demonstrar outros pontos para avaliação de vocês.
 5. Tentei demonstrar um pouco do desenho da aplicação utilizando Hexagonal Architecture, pois achei que ficaria melhor nesse cenário, mas poderia ter feito utilizando outras abordagens. MDemonstrei só um pouco e sei que muitos pontos poderiam ter sido melhor abstraido, mas acho que dá para medir um pouco do meu conhecimento :).
+6. Não tive tempo de fazer o frontend. É algo que também tenho muita facilidade e faz parte do meu dia a dia fazem anos, inclusive utilizando React, Angular e Next, como também Tailwind como style system, ou less, sass, etc. Mas .. não deu tempo :(
 
 Os pontos que na minha visão, serão avaliados com mais ênfase e que foram os que tentei dar mais destaque:
 
@@ -46,6 +46,8 @@ Os pontos que na minha visão, serão avaliados com mais ênfase e que foram os 
 
 ## 1. Extração de logs via arquivos de logs de sistemas externos
 
+:( Faltou algumas coisas
+
 Por conta de ataque em sistema da companhia XPTO, o time de desenvolvimento foi envolvido para analisar os logs, mas para melhoria dessa tarefa de analise, precisamos que seja disponiblizadas algumas funcionalidades via app web
 
 Eu, como engenheiro de segurança, quero que seja desenvolvido um aplicativo web contendo a funcionalidade que utilizarei para extrair e armazenar dados de arquivos de logs de sistemas, para posterirmente ser consumido de maneira mais amigavel por todos, facilitando analise e tomada de deciões:
@@ -67,6 +69,8 @@ Será utilizado para validação, consulta na base de dados, verificando se a ca
 
 ## 2. Visualização de Logs por categoria
 
+:( Faltou algumas coisas
+
 Por conta de ataque em sistema da companhia XPTO, o time de desenvolvimento foi envolvido para analisar os logs, mas para melhoria dessa tarefa de analise, precisamos que seja disponiblizadas algumas funcionalidades via app web.
 
 Eu, como engenheiro de segurança, quero visualizar via web, os logs que foram extraídos de arquivos de sistemas. 
@@ -76,6 +80,8 @@ Eu, como engenheiro de segurança, quero visualizar via web, os logs que foram e
 
 ## 3. Filtrar logs por período
 
+:( Faltou algumas coisas
+
 Por conta de ataque em sistema da companhia XPTO, o time de desenvolvimento foi envolvido para analisar os logs, mas para melhoria dessa tarefa de analise, precisamos que seja disponiblizadas algumas funcionalidades via app web.
 
 Eu, como engenheiro de segurança, dentro da aplicação web (XPTO), na funcionalidade de listagem de logs por categoria, quero também pesquisar logs por período de data. Então além de selecionar a categoria, poderei também fazer filtros por período.
@@ -84,8 +90,19 @@ Eu, como engenheiro de segurança, dentro da aplicação web (XPTO), na funciona
 ![hexagonal architecture with anti-corruption pattern](https://github.com/fernandoPrudente/loganalizer/blob/master/readme-images/arc-diagram.png)
 
 
-# Setup
-Ainda não tem. :(
+# Implementação
 
-# Usando
-Ainda não tem. :(
+Por mais que muitas coisas não ficaram prontas, essa abaixo é a stack do projeto:
+
+Projeto NPM Monorepo (worspaces)
+Backend: Nodejs + Typescript + Express + MongoDB + OAS com Swagger
+Development Environment: docker + docker compose
+
+### Pontos importantes:
+
+- .env está no repositorio pois não tem nada sensível, já que é de ambiente de DEV;
+- Teste unitário: Existe 1 teste unitário da classe de UserCase 'ExtractLogsFromExternalLogFileUserCase'. 
+Nesse teste é possível observar a utilização de Mocha, Chai e Sinon. Uso sinon para fazer stubs das dependências, injeção de dependencias utilizando objetos mocks via Sinon, dentre outros padrões de teste aplicados.
+
+
+

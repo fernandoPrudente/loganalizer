@@ -1,6 +1,15 @@
 version: '3'
 services: 
 
+  database:    
+    image: mongo:4
+    container_name: loggermanager-mongodb
+    networks: 
+      - loggermanager-networking
+    restart: always
+    ports: 
+      - 28017:28017 
+
   webapp:     
     image: node
     container_name: loggermanager-webapp
@@ -13,28 +22,24 @@ services:
     volumes: 
       - ./projects/webapp/:/app/
 
-  database:    
-    image: mongo:4
-    container_name: loggermanager-mongodb
-    networks: 
-      - loggermanager-networking
-    restart: always
-    ports: 
-      - 27017:27017 
-
   webapi: 
     image: node
     container_name: loggermanager-webapi
     networks: 
       - loggermanager-networking
     restart: always
-    command: sh -c "npm i typescript -g && npm run dev"
+    command: sh -c "npm i && npm i typescript -g && npm run dev"
     ports:
       - 5000:5000
     working_dir: /api
     volumes: 
       - ./projects/webapi/:/api/
+      - node_modules:/api/node_modules
 
 networks:
   loggermanager-networking:
     driver: bridge
+
+
+volumes:
+  node_modules: {}
