@@ -1,0 +1,1 @@
+Abstrações de portas drivings ficariam aqui, mas tempo curto e não foi possível demonstrar.
